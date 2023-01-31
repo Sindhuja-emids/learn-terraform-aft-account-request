@@ -1,17 +1,17 @@
-module "test" {
+module "sandbox" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "sandboxafttest@gainwelltechnologies.com"
-    AccountName               = "sandbox-aft-test"
-    ManagedOrganizationalUnit = "GWT-AWS-PRODENG-GBL-OU-SANDBOX"
-    SSOUserEmail              = "mike.guiridlian@gainwelltechnologies.com"
-    SSOUserFirstName          = "mike"
-    SSOUserLastName           = "Guiridlian"
+    AccountEmail              = "<ACCOUNT EMAIL>"
+    AccountName               = "sandbox-aft"
+    ManagedOrganizationalUnit = "Learn AFT"
+    SSOUserEmail              = "<SSO EMAIL>"
+    SSOUserFirstName          = "Sandbox"
+    SSOUserLastName           = "AFT"
   }
 
   account_tags = {
-    "sandbox-aft" = "AFT"
+    "Learn Tutorial" = "AFT"
   }
 
   change_management_parameters = {
@@ -20,7 +20,7 @@ module "test" {
   }
 
   custom_fields = {
-    group = "sandbox"
+    group = "non-prod"
   }
 
   account_customizations_name = "sandbox"
